@@ -36,29 +36,29 @@ header {
       height: 70px;
       position: relative;
       padding-top: 1.5rem;
+
+      &.active {
+        font-weight: 700;
+      }
+
+      &.active:before,
+      &:hover:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        transform: scaleX(0);
+        animation: scaleNavActive 0.7s forwards ease-in-out;
+        background-color: var.$secondary-clr-50;
+      }
     }
-    .nav-link.active {
-      font-weight: 700;
-    }
-    .nav-link.active:before,
-    .nav-link:hover:before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background-color: var.$secondary-clr-50;
-    }
-    .nav-link:nth-child(6):after {
-      content: '';
-      position: absolute;
-      top: 1rem;
-      bottom: 1rem;
-      right: 0;
-      width: 2px;
-      background-color: #d6d6d6;
-    }
+  }
+}
+@keyframes scaleNavActive {
+  to {
+    transform: scale(100%, 180%);
   }
 }
 
@@ -189,6 +189,11 @@ header {
 
   .header-top .link-group .link {
     height: 100%;
+    .user-icon {
+      height: 18px;
+      filter: invert(18%) sepia(10%) saturate(609%) hue-rotate(189deg)
+        brightness(96%) contrast(86%);
+    }
   }
 
   .header-top .link-group a {
@@ -215,23 +220,40 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-  }
-
-  .header-mid .link-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .header-mid .link-group .link {
-    padding-inline: 1.5rem;
-    color: #5273be;
-  }
-  .header-mid .link-group .link:nth-child(1) {
-    border-right: 2px solid #d6d6d6;
+    .link-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .link {
+        padding-inline: 1.5rem;
+        color: var.$primary-clr-50;
+      }
+      .link:nth-child(1) {
+        border-right: 2px solid #d6d6d6;
+      }
+      img {
+        height: 28px;
+        padding-right: 1rem;
+        filter: invert(24%) sepia(63%) saturate(4926%) hue-rotate(189deg)
+          brightness(95%) contrast(101%);
+      }
+    }
   }
 
   .header-mid .link-group .bi-question-circle-fill,
   .header-mid .link .bi-telephone-fill {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-link:nth-child(6):after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    right: 0;
+    width: 2px;
+    background-color: #d6d6d6;
   }
 }

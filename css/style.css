@@ -109,12 +109,22 @@ section.carousel {
 
 footer a {
   font-size: 0.8rem;
+  color: #fff;
+}
+footer a:hover {
+  color: #cbe300;
 }
 footer .social-link-label {
   font-size: 1.2rem;
 }
 footer .social-link-item {
   font-size: 2rem;
+  height: 32px;
+  width: 32px;
+  filter: invert(100%) sepia(0%) saturate(5645%) hue-rotate(174deg) brightness(122%) contrast(96%);
+}
+footer .social-link-item:hover {
+  filter: invert(70%) sepia(89%) saturate(1438%) hue-rotate(21deg) brightness(109%) contrast(101%);
 }
 
 .btn-agence-rappel {
@@ -186,10 +196,23 @@ footer .social-link-item {
 .navbar-collapse {
   width: 100vw;
   z-index: 20;
+  width: 3rem;
+  height: 100vh;
+}
+
+.navbar-toggler {
+  background-color: #ebebeb;
+  height: 2.6rem;
+  border: none;
+}
+.navbar-toggler:hover {
+  background-color: #d2d2d2;
 }
 
 .navbar-brand {
+  width: 100%;
   position: relative;
+  height: 100%;
   top: 0;
   width: 100vw;
 }
@@ -202,12 +225,28 @@ footer .social-link-item {
 
 .icon-user {
   position: absolute;
-  top: -35px;
-  left: 100%;
-  padding-right: 2rem;
+  top: -2.5rem;
+  left: calc(100% - 2rem);
   transform: translateX(-100%);
+  width: 3.5rem;
+  height: 2.6rem;
+  background-color: #cbe300;
+}
+.icon-user:hover {
+  background-color: #9db000;
+}
+.icon-user .icon-user-img {
+  position: relative;
+  height: 20px;
+  filter: invert(18%) sepia(10%) saturate(609%) hue-rotate(189deg) brightness(96%) contrast(86%);
 }
 
+@media screen and (min-width: 1200px) {
+  .navbar-collapse {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -248,26 +287,30 @@ header {
 .header-bottom .navbar-nav .nav-link.active {
   font-weight: 700;
 }
-.header-bottom .navbar-nav .nav-link.active:before,
-.header-bottom .navbar-nav .nav-link:hover:before {
+.header-bottom .navbar-nav .nav-link.active:before, .header-bottom .navbar-nav .nav-link:hover:before {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 4px;
+  transform: scaleX(0);
+  -webkit-animation: scaleNavActive 0.7s forwards ease-in-out;
+          animation: scaleNavActive 0.7s forwards ease-in-out;
   background-color: #cbe300;
 }
-.header-bottom .navbar-nav .nav-link:nth-child(6):after {
-  content: "";
-  position: absolute;
-  top: 1rem;
-  bottom: 1rem;
-  right: 0;
-  width: 2px;
-  background-color: #d6d6d6;
+
+@-webkit-keyframes scaleNavActive {
+  to {
+    transform: scale(100%, 180%);
+  }
 }
 
+@keyframes scaleNavActive {
+  to {
+    transform: scale(100%, 180%);
+  }
+}
 /*** menu bottom ***/
 .nav-bottom {
   z-index: 5;
@@ -386,6 +429,10 @@ header {
   .header-top .link-group .link {
     height: 100%;
   }
+  .header-top .link-group .link .user-icon {
+    height: 18px;
+    filter: invert(18%) sepia(10%) saturate(609%) hue-rotate(189deg) brightness(96%) contrast(86%);
+  }
 
   .header-top .link-group a {
     line-height: 50px;
@@ -413,25 +460,38 @@ header {
     align-items: center;
     background-color: white;
   }
-
   .header-mid .link-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   .header-mid .link-group .link {
     padding-inline: 1.5rem;
-    color: #5273be;
+    color: #0073be;
   }
-
   .header-mid .link-group .link:nth-child(1) {
     border-right: 2px solid #d6d6d6;
+  }
+  .header-mid .link-group img {
+    height: 28px;
+    padding-right: 1rem;
+    filter: invert(24%) sepia(63%) saturate(4926%) hue-rotate(189deg) brightness(95%) contrast(101%);
   }
 
   .header-mid .link-group .bi-question-circle-fill,
 .header-mid .link .bi-telephone-fill {
     font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav-link:nth-child(6):after {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    right: 0;
+    width: 2px;
+    background-color: #d6d6d6;
   }
 }
 .card-quotes {

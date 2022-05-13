@@ -1,11 +1,24 @@
+@use '../general/variables' as var;
+
 /*** Navbar ***/
 .navbar-collapse {
   width: 100vw;
   z-index: 20;
+  width: 3rem;
+  height: 100vh;
 }
-
+.navbar-toggler {
+  background-color: #ebebeb;
+  height: 2.6rem;
+  border: none;
+  &:hover {
+    background-color: #d2d2d2;
+  }
+}
 .navbar-brand {
+  width: 100%;
   position: relative;
+  height: 100%;
   top: 0;
   width: 100vw;
   .brand {
@@ -17,8 +30,26 @@
 }
 .icon-user {
   position: absolute;
-  top: -35px;
-  left: 100%;
-  padding-right: 2rem;
+  top: -2.5rem;
+  left: calc(100% - 2rem);
   transform: translateX(-100%);
+  width: 3.5rem;
+  height: 2.6rem;
+  background-color: var.$secondary-clr-50;
+  &:hover {
+    background-color: var.$secondary-clr-100;
+  }
+  .icon-user-img {
+    position: relative;
+    height: 20px;
+    filter: invert(18%) sepia(10%) saturate(609%) hue-rotate(189deg)
+      brightness(96%) contrast(86%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar-collapse {
+    width: 3rem;
+    height: 3rem;
+  }
 }
