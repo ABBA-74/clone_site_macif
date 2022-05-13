@@ -1,0 +1,12 @@
+@use '../general/variables' as var;
+
+.card-advice {
+  height: clamp(10rem, 20rem, 35rem);
+  border: 1px solid #bdbcbc69;
+  margin-block: 1rem;
+  border-radius: var.$border-radius;
+  transition: box-shadow 0.45s ease-in-out;
+  &:hover {
+    box-shadow: var.$shadow-md;
+  }
+}

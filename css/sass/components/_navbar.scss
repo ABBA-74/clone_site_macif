@@ -1,0 +1,24 @@
+/*** Navbar ***/
+.navbar-collapse {
+  width: 100vw;
+  z-index: 20;
+}
+
+.navbar-brand {
+  position: relative;
+  top: 0;
+  width: 100vw;
+  .brand {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.icon-user {
+  position: absolute;
+  top: -35px;
+  left: 100%;
+  padding-right: 2rem;
+  transform: translateX(-100%);
+}

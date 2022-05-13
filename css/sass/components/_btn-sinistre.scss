@@ -1,0 +1,18 @@
+#btn-sinistre {
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  top: calc(37% + 150px);
+  color: white;
+  background-color: #e6325a;
+  height: 77px;
+  width: 68px;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  box-shadow: -5px 5px 20px #55555566;
+
+  .fa-bolt-lightning {
+    font-size: 1.3rem;
+  }
+}

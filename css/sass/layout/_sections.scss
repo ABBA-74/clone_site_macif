@@ -1,0 +1,10 @@
+section {
+  padding-inline: 1vw;
+}
+
+@media screen and (min-width: 1268px) {
+  section {
+    padding-inline: calc((100vw - 1160px) / 2);
+    /* width: 1160px; */
+  }
+}

@@ -1,0 +1,24 @@
+@use '../general/variables' as var;
+
+.card-sm {
+  background-color: #fff;
+  transition: box-shadow 0.45s ease-in-out;
+  max-width: 565px;
+  border-radius: var.$border-radius;
+  overflow: hidden;
+  &:nth-child(1) {
+    margin-right: 1.5rem;
+  }
+  //   background-color: red;
+  //   border: 1px solid red;
+  .card-img img {
+    width: 200px;
+    height: 330px;
+  }
+  .card-content {
+    width: calc(100% - 200px);
+  }
+  &:hover {
+    box-shadow: var.$shadow-md;
+  }
+}

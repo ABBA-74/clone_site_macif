@@ -1,0 +1,30 @@
+@use '../general/variables' as var;
+
+.why-content {
+  position: relative;
+  border-radius: var.$border-radius;
+  border: 1px solid rgba(85, 85, 85, 0.4117647059);
+  height: clamp(10rem, 25rem, 48rem);
+  padding-inline: 2rem;
+  margin-block: 1rem;
+
+  .why-content-header {
+    position: absolute;
+    top: 1.2rem;
+    width: 5rem;
+    // border: 1px solid rgba(85, 85, 85, 0.4117647059);
+    height: clamp(5em, 8rem, 10rem);
+
+    .why-content-img {
+      //   position: absolute;
+      //   top: 20px;
+      margin-top: 20px;
+      height: 80px;
+      width: auto;
+      margin-bottom: 1rem;
+    }
+  }
+  .why-content-title {
+    padding-top: 100px;
+  }
+}

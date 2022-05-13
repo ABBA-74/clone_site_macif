@@ -1,0 +1,14 @@
+@use '../general/variables' as var;
+
+.card-quotes {
+  background-color: #fff;
+  height: 175px;
+  width: 175px;
+  width: auto;
+  border-radius: var.$border-radius;
+}
+
+.card-quotes img {
+  height: 45px;
+  width: auto;
+}

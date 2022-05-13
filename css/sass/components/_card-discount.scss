@@ -1,0 +1,23 @@
+@use '../general/variables' as var;
+
+.card-discount {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border-radius: var.$border-radius;
+  width: auto;
+  height: 155px;
+  margin: 0.5rem;
+  .title-logo {
+    width: 400px;
+    height: 84px;
+  }
+  .brand-img {
+    width: 140px;
+    height: 70px;
+  }
+  .value-discount {
+    font-size: 1.5rem;
+    color: var.$primary-clr-100;
+  }
+}

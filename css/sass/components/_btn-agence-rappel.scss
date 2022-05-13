@@ -1,0 +1,35 @@
+@use '../general/variables' as var;
+
+.btn-agence-rappel {
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  top: 37%;
+  font-size: 1rem;
+  color: #373940;
+  background-color: var.$secondary-clr-50;
+  height: 144px;
+  width: 68px;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  box-shadow: -5px 5px 20px #5555554b;
+
+  #btn-agence::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0.64rem;
+    right: 0.64rem;
+    height: 2px;
+    background-color: #37394031;
+  }
+
+  .fa-calendar-days {
+    font-size: 1.3rem;
+  }
+  .support-icon {
+    width: 16px;
+    height: 18px;
+  }
+}

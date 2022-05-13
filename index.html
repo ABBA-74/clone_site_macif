@@ -13,6 +13,13 @@
     <script src="script.js" defer></script>
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
     />
     <link
@@ -21,13 +28,72 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- Btns position fixed -->
+    <div class="btns-position-fixed d-none d-md-block">
+      <div
+        class="btn-agence-rappel d-flex flex-column justify-content-around align-items-center"
+      >
+        <div class="d-flex flex-column align-items-center" id="btn-agence">
+          <span>
+            <!-- <i class="fa-solid fa-calendar-days"></i> -->
+            <img
+              height="16"
+              width="16"
+              src="./assets/icons/calendar-days-solid.svg"
+              alt=""
+              srcset=""
+            />
+          </span>
+          <span>Agence</span>
+        </div>
+
+        <div class="d-flex flex-column align-items-center" id="btn-rappel">
+          <img
+            src="./assets/icons/support.png"
+            class="support-icon <"
+            alt=""
+            srcset=""
+          />
+          <span>Rappel</span>
+        </div>
+      </div>
+      <div
+        class="d-flex flex-column justify-content-center align-items-center"
+        id="btn-sinistre"
+      >
+        <span>
+          <!-- <i class="fa-solid fa-bolt-lightning"></i> -->
+          <img src="./assets/icons/bolt-lightning-solid.svg" height="16"
+          width="16" alt=""" srcset="">
+        </span>
+        <span>Sinistre</span>
+      </div>
+
+      <div
+        class="d-flex justify-content-center align-items-center"
+        id="btn-top-page"
+      >
+        <!-- <i class="fa-solid fa-angle-up"></i> -->
+        <img
+          src="./assets/icons/chevron-up-solid.svg"
+          height="16"
+          width="16"
+          alt=""
+          srcset=""
+        />
+      </div>
+    </div>
+
+    <!-- End Btns position fixed -->
+
+    <!-- Section Header -->
     <header>
       <div class="header-top">
         <div class="link-group">
-          <div class="link"><a href="#">Particulier</a></div>
+          <div class="link"><a href="#">Particuliers</a></div>
           <div class="link"><a href="#">Professionnels et Entreprises</a></div>
           <div class="link"><a href="#">Associations et CSE</a></div>
         </div>
@@ -54,12 +120,15 @@
           </div>
         </div>
       </div>
-      <div class="header-bottom">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
+      <div
+        class="header-bottom d-flex justify-content-between justify-content-xl-center"
+      >
+        <nav class="navbar navbar-expand-xl navbar-light bg-white">
+          <div class="container-fluid p-0">
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <!-- <div class="d-flex align-items-center bg-warning nav-"> -->
             <button
-              class="navbar-toggler"
+              class="navbar-toggler ms-4"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNavAltMarkup"
@@ -69,37 +138,1295 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="navbar-brand d-xl-none d-flex">
+              <!-- <img src="" alt="" class="icon-user">icon</img> -->
+              <p class="icon-user">Icon</p>
+              <a class="brand" href="#"><h1>MACIF</h1> </a>
+            </div>
+            <!-- </div> -->
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div
-                class="navbar-nav d-flex justify-content-center align-items-center"
+                class="navbar-nav bg-white w-100 h-100 px-4 px-xl-0 pb-4 pb-xl-0 d-flex justify-content-start justify-content-xl-center align-items-center"
               >
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link me-auto" aria-current="page" href="#"
                   >Véhicules et mobilité</a
                 >
-                <a class="nav-link" href="#">Habitation</a>
-                <a class="nav-link" href="#">Vie quotidienne et loisirs</a>
-                <a class="nav-link" href="#">Santé et prévoyance</a>
-                <a class="nav-link" href="#">Crédit et épargne</a>
-                <a class="nav-link" href="#">Macif Avantages</a>
-                <a class="nav-link" href="#">
+                <a class="nav-link me-auto" href="#">Habitation</a>
+                <a class="nav-link me-auto" href="#"
+                  >Vie quotidienne et loisirs</a
+                >
+                <a class="nav-link me-auto" href="#">Santé et prévoyance</a>
+                <a class="nav-link me-auto" href="#">Crédit et épargne</a>
+                <a class="nav-link me-auto" href="#">Macif Avantages</a>
+                <a class="nav-link me-auto" href="#">
                   <img src="/assets/icons/icon-navbar.png" alt="" srcset="" />
                   Découvrir la Macif</a
                 >
 
                 <!-- <a
-                  class="nav-link disabled"
-                  href="#"
+                    class="nav-link disabled"
+                    href="#"
                   tabindex="-1"
                   aria-disabled="true"
                   >Disabled</a
-                > -->
+                  > -->
               </div>
             </div>
           </div>
         </nav>
+        <div class="row nav-bottom d-none">
+          <div class="col-6 wrapper-links d-flex">
+            <div class="list-group mt-4">
+              <ul class="list-group-items">
+                <li class="list-group-item item-title">
+                  <h4 class="fw-bold">Assurances</h4>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">Assurance automobile</a>
+                </li>
+                <li class="list-group-item"><a href="#">Assurance moto</a></li>
+                <li class="list-group-item">
+                  <a href="#">Assurance scooter</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">Assurance camping-car</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">Assurance vélo électrique</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">Assurance trottinette électrique</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">Assurance nouvelles mobilités</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">Assurance jeune conducteur</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">Assurance corporelle du conducteur</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">Assurance panne mécanique</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">Découvrez l'assurance auto professionnelle</a>
+                </li>
+              </ul>
+            </div>
+            <div class="list-group mt-4">
+              <ul class="list-group-items">
+                <li class="list-group-item item-title">
+                  <h4 class="fw-bold">Financements</h4>
+                </li>
+                <li class="list-group-item"><a href="#">Crédit auto</a></li>
+                <li class="list-group-item">
+                  <a href="#">Location Auto tout compris</a>
+                </li>
+                <li class="list-group-item"><a href="#">Crédit moto</a></li>
+                <li class="list-group-item">
+                  <a href="#">Crédit camping-car</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">Crédit voiture électrique</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">Crédit vélo électrique</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="col-6 wrapper-cards d-flex align-content-start flex-wrap pb-5"
+          >
+            <div class="row ms-4 g-2">
+              <div class="col-4">
+                <div class="card mt-4">
+                  <div class="card-header">
+                    <img
+                      src="./assets/img/constat_amiable.jpg"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="badge"></div>
+                  </div>
+                  <div class="card-body pt-1 px-2">
+                    <div class="card-title">
+                      <h6 class="fw-bolder">
+                        Gestion d'un sinistre auto - tout savoir
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="card-footer pt-1 px-2">
+                    <div class="link">
+                      <a href="#"
+                        >Découvrir <i class="fa-solid fa-angle-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card mt-4">
+                  <div class="card-header">
+                    <img
+                      src="./assets/img/pneus.jpg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                    <div class="badge"></div>
+                  </div>
+                  <div class="card-body pt-1 px-2">
+                    <div class="card-title">
+                      <h6 class="fw-bolder">
+                        Comment souscrire une assurance auto ?
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="card-footer pt-1 px-2">
+                    <div class="link">
+                      <a href="#"
+                        >Découvrir <i class="fa-solid fa-angle-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card mt-4">
+                  <div class="card-header">
+                    <img
+                      src="./assets/img/motard.jpg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                    <div class="badge"></div>
+                  </div>
+                  <div class="card-body pt-1 px-2">
+                    <div class="card-title">
+                      <h6 class="fw-bold">
+                        Challenge Macif Riders : de nouvelles actions solidaires
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="card-footer pt-1 px-2">
+                    <div class="link">
+                      <a href="#"
+                        >Découvrir <i class="fa-solid fa-angle-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row ms-3">
+              <div class="col-12">
+                <h5 class="mt-4 mb-3">En complément de vos assurances</h5>
+              </div>
+            </div>
+            <div class="row ms-3">
+              <div class="col-6">
+                <div class="card-feature pt-2 pb-1 px-3">
+                  <div class="py-2 card-feature__header">
+                    <img src="./assets/icons/car.png" alt="" srcset="" />
+                  </div>
+                  <div class="pb-1 card-feature__body">
+                    <p>
+                      <span class="fw-bolder">Panne 0 km.</span>
+                      Assitance 0 km pour votre depannage voiture.
+                    </p>
+                  </div>
+                  <div class="card-feature__footer">
+                    <a href="#"
+                      >Découvrir <i class="fa-solid fa-angle-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-feature pt-2 pb-1 px-3">
+                  <div class="py-2 card-feature__header">
+                    <img src="./assets/icons/car-euro.png" alt="" srcset="" />
+                  </div>
+                  <div class="pb-1 card-feature__body">
+                    <p>
+                      <span class="fw-bolder">En voiture Simone.</span>
+                      L'auto-école en ligne
+                    </p>
+                  </div>
+                  <div class="card-feature__footer">
+                    <a href="#"
+                      >Découvrir <i class="fa-solid fa-angle-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <!-- End section Header -->
+
+    <!-- Main -->
+    <div class="container-fluid p-0">
+      <main>
+        <!-- Section quotes -->
+        <section class="quotes mt-2 py-5">
+          <div class="row p-2 mx-0">
+            <div class="col-12">
+              <h3 class="py-4 text-white text-center">
+                Réalisez votre devis en ligne
+              </h3>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-2">
+              <div
+                class="card-quotes d-flex flex-column justify-content-evenly align-items-center px-2"
+              >
+                <div class="card-quotes__header">
+                  <span class="align-self-end badge bg-secondary"
+                    >Assurance</span
+                  >
+                </div>
+                <div class="card-quotes__body pb-2">
+                  <img src="./assets/icons/quote-car.png" alt="" srcset="" />
+                </div>
+                <div class="card-quotes__footer">
+                  <button class="btn btn-primary-clr">Devis Auto</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-2">
+              <div
+                class="card-quotes d-flex flex-column justify-content-evenly align-items-center px-2"
+              >
+                <div class="card-quotes__header">
+                  <span class="align-self-end badge bg-secondary"
+                    >Assurance</span
+                  >
+                </div>
+                <div class="card-quotes__body pb-2">
+                  <img src="./assets/icons/quote-moto.png" alt="" srcset="" />
+                </div>
+                <div class="card-quotes__footer">
+                  <button class="btn btn-primary-clr">Devis 2 Roues</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-2">
+              <div
+                class="card-quotes d-flex flex-column justify-content-evenly align-items-center px-2"
+              >
+                <div class="card-quotes__header">
+                  <span class="align-self-end badge bg-secondary"
+                    >Assurance</span
+                  >
+                </div>
+                <div class="card-quotes__body pb-2">
+                  <img src="./assets/icons/quote-home.png" alt="" srcset="" />
+                </div>
+                <div class="card-quotes__footer">
+                  <button class="btn btn-primary-clr">Devis Habitation</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-2">
+              <div
+                class="card-quotes d-flex flex-column justify-content-evenly align-items-center px-2"
+              >
+                <div class="card-quotes__header">
+                  <span class="align-self-end badge bg-secondary"
+                    >Assurance</span
+                  >
+                </div>
+                <div class="card-quotes__body pb-2">
+                  <img src="./assets/icons/quote-health.png" alt="" srcset="" />
+                </div>
+                <div class="card-quotes__footer">
+                  <button class="btn btn-primary-clr">Devis Santé</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 d-none d-lg-block p-2">
+              <div
+                class="card-quotes d-flex flex-column justify-content-evenly align-items-center px-2"
+              >
+                <div class="card-quotes__header">
+                  <span class="align-self-end badge bg-secondary"
+                    >Assurance</span
+                  >
+                </div>
+                <div class="card-quotes__body pb-2">
+                  <img src="./assets/icons/quote-credit.png" alt="" srcset="" />
+                </div>
+                <div class="card-quotes__footer">
+                  <button class="btn btn-primary-clr">Crédit Auto</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 d-none d-lg-block p-2">
+              <div
+                class="card-quotes d-flex flex-column justify-content-center align-items-center px-2"
+              >
+                <!-- <div class="card-quotes__header"> -->
+                <!-- <span class="align-self-end badge bg-secondary"
+                    >Assurance</span
+                  > -->
+                <!-- </div> -->
+                <div class="card-quotes__body pt-5 pb-4">
+                  <img src="./assets/icons/quote-plus.png" alt="" srcset="" />
+                </div>
+                <div class="card-quotes__footer">
+                  <p class="text-primary-clr">Voir plus de produits</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End section quotes -->
+
+        <!-- section carousel -->
+        <section class="carousel pt-2 pb-5">
+          <div
+            id="carouselExampleDark"
+            class="carousel carousel-dark slide mx-2 mx-sm-0"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="3"
+                aria-label="Slide 1"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <!-- First slide -->
+              <div class="carousel-item active" data-bs-interval="50000">
+                <img
+                  src="/assets/img/Carousel1_Sonia.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption text-start p-0 pt-lg-3 ps-5">
+                  <p class="pt-0 pt-md-2 pt-lg-4">Sonia P.</p>
+                  <p>sociétaire a dit :</p>
+                  <p>"A la Macif, je suis Sonia.</p>
+                  <p class="carousel-subtitle">
+                    Je ne suis pas<br />un numéro 7,8,9.
+                  </p>
+                  <p>On la souligné parce</p>
+                  <p>qu'elle a bien insité là-dessus.</p>
+                  <button class="btn btn-primary-clr btn-w-md">
+                    Je découvre
+                  </button>
+                </div>
+              </div>
+              <!-- Second slide -->
+              <div class="carousel-item">
+                <img
+                  src="/assets/img/carrousel_home_marque_preferee.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption text-start p-0 pt-lg-3 ps-5">
+                  <p class="carousel-subtitle pt-0 pt-md-2 pt-lg-4">
+                    La Macif est élue<br />Marque Préférée<br />des Français
+                  </p>
+                  <p class="mt-4">Catégorie Compagnies d'assurance *</p>
+                  <p class="carousel-subtext pt-0 pt-md-2 pt-lg-4">
+                    * Etude réalisé du 112 au 13 janvier 2022 par La Marque
+                    Préférée des Français auprès de 1022 répondants
+                    représentatifs de la population Française - terrain réalisé
+                    par OpinionWay - dans la catégorie Compagnies d'assurance
+                  </p>
+                </div>
+              </div>
+              <!-- Third slide label -->
+              <div class="carousel-item">
+                <img
+                  src="/assets/img/Carrousel2_Clara.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption text-start p-0 pt-lg-3 ps-5">
+                  <p class="pt-0 pt-md-2 pt-lg-4">Clara F.</p>
+                  <p>sociétaire a dit :</p>
+                  <p>"Je me suis tout de suite</p>
+                  <p>sentie en confiance,</p>
+                  <p class="carousel-subtitle">protégée."</p>
+                  <p>Un mot tellement fort</p>
+                  <p>qu'on a voulu le mettre en avant.</p>
+                  <button class="btn btn-primary-clr btn-w-md">
+                    Je découvre
+                  </button>
+                </div>
+              </div>
+              <!-- Fourth slide -->
+              <div class="carousel-item">
+                <img
+                  src="/assets/img/Carrousel3_Albert.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption text-start p-0 pt-lg-3 ps-5">
+                  <p class="pt-0 pt-md-2 pt-lg-4">Albert C.</p>
+                  <p>sociétaire a dit :</p>
+                  <p>"Ils n'ont pas d'actionnaires</p>
+                  <p>à rémunérer donc</p>
+                  <p>ils ont des tarifs plus</p>
+                  <p class="carousel-subtitle">comp-pé-ti-tifs."</p>
+                  <p>Il a tenu à insiter en détachant</p>
+                  <p>les syllabes.</p>
+                  <button class="btn btn-primary btn-w-md">Je découvre</button>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+        <!--  End section carousel -->
+
+        <!--  Section news -->
+        <section class="news bg-light-clr mt-2 py-5">
+          <div class="row g-0 p-2">
+            <div class="col-12">
+              <h3 class="py-4 text-center">En ce moment à la Macif</h3>
+            </div>
+          </div>
+          <div class="row card-lg mb-5 mx-3 mx-sm-0">
+            <div class="col-12 col-lg-7 card-img-lg px-0">
+              <img
+                src="./assets/img/service-news.jfif"
+                class="img-fluid"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div
+              class="col-12 col-lg-5 d-flex flex-column justify-content-center text-center text-lg-start pt-4 pb-4"
+            >
+              <h4>Un service gratuit pour vos travaux</h4>
+              <p>
+                Estimation de vos travaux, mise en relation avec un artisan,
+                vérification des devis. La Macif vous accompagne*!
+              </p>
+              <p class="descriptive-text">
+                *Service de mise en relation soumis à condition
+              </p>
+              <button class="btn btn-primary-clr btn-w-md mx-auto ms-lg-0">
+                Je découvre
+              </button>
+            </div>
+          </div>
+
+          <div class="group-cards-sm d-none d-xxl-block">
+            <div class="row mb-5">
+              <div
+                class="col-6 card-sm d-flex justify-content-center align-items-center ps-0"
+              >
+                <div class="col card-img w-25">
+                  <img
+                    src="./assets/img/ban_home_01.jpg"
+                    class=""
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+
+                <div class="card-content ps-3">
+                  <h4>Economisez sur votre assurance de prêt* !</h4>
+                  <p>
+                    Avec <strong>Garantie Emprunteur Macif,</strong> changez en
+                    toute simplicité votre assurance de prêt immo et réaliser
+                    des économies.
+                  </p>
+                  <p class="descriptive-text">
+                    <strong
+                      >*Sous conditions. Exemple d'économie selon profil de
+                      l'emprunteur.</strong
+                    >
+                    Garantie accordée dans les conditions et limites du contrat
+                    souscrit.
+                  </p>
+                  <a href="#" class="link-next">Je découvre</a>
+                </div>
+              </div>
+              <div
+                class="col-6 card-sm d-flex justify-content-center align-items-center ps-0"
+              >
+                <div class="col card-img w-25">
+                  <img
+                    src="./assets/img/ban_home_pret_travaux.jpg"
+                    class="'img-fluid"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <div class="card-content px-3">
+                  <h4>Prêt travaux à taux promo</h4>
+                  <p><strong>Du 04/04 au 18/06/2022</strong></p>
+                  <p>
+                    Un crédit vous engage et doit être remboursé. Vérifiez vos
+                    capacités de remboursement avant de vous engager.
+                  </p>
+                  <p class="descriptive-text">
+                    *Organisme prêteur Socram Banque <br />sur les
+                    <strong>durées d'emprunt de 13 à 120 mois</strong>
+                  </p>
+                  <a href="#" class="link-next">Je découvre</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-5">
+              <div
+                class="col-6 card-sm d-flex justify-content-center align-items-center ps-0"
+              >
+                <div class="col card-img w-25">
+                  <img
+                    src="./assets/img/ban_home_Auto_moto.jpg"
+                    class=""
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+
+                <div class="card-content ps-3">
+                  <h4>Auto + Moto = 10% de réduction*</h4>
+                  <p>
+                    Bénéficiez de 10% de réduction sur votre cotisation pour la
+                    souscription simultanée d'un contrat auto et moto.
+                  </p>
+                  <p>Parlez en à votre conseiller !</p>
+                  <p class="descriptive-text">
+                    *Offre soumise à conditions, non disponible sur macif.fr
+                  </p>
+                  <a href="#" class="link-next">Je découvre</a>
+                </div>
+              </div>
+              <div
+                class="col-6 card-sm d-flex justify-content-center align-items-center ps-0"
+              >
+                <div class="col card-img w-25">
+                  <img
+                    src="./assets/img/ban_Mas_voyages.jfif"
+                    class="'img-fluid"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <div class="card-content px-3">
+                  <h4>Préparez vos vacances jusqu'à -70%*</h4>
+                  <p>
+                    Réservez vos <strong>locations</strong> de vacances,
+                    <strong>campings, clubs, circuits, croisières</strong> ou
+                    <strong>hôtels</strong> partout dans le monde grâce aux
+                    <strong>remises Macif Avantages</strong>*!
+                  </p>
+                  <p class="descriptive-text">
+                    *Offres réservées aux sociétaires Macif, soumises à
+                    conditions.
+                  </p>
+                  <a href="#" class="link-next">Je découvre</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End section news -->
+
+        <!-- Section support -->
+        <section class="support mt-2 py-5">
+          <div class="row g-0 p-2">
+            <div class="col-12">
+              <h3 class="py-4 text-center">
+                La Macif vous accompagne dans les moments de vie
+              </h3>
+            </div>
+          </div>
+          <div class="row px-0 group-cards-support d-flex mb-5">
+            <div class="col-12 col-lg-4">
+              <div class="card-support">
+                <div class="card-support-bg">
+                  <img src="./assets/img/JE-DEmenage.jpg" alt="" />
+                </div>
+                <div class="card-support-content text-white text-center pt-5">
+                  <h4 class="text-white">Je déménage</h4>
+                  <button class="btn btn-primary-clr mx-3 my-3 p-3">
+                    La Macif m'accompagne à toutes les étapes de mon
+                    déménagement
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="card-support">
+                <div class="card-support-bg">
+                  <img src="./assets/img/credit-Voiture.jpg" alt="" />
+                </div>
+                <div class="card-support-content text-white text-center pt-5">
+                  <h4 class="text-white">Achat de voiture</h4>
+                  <button class="btn btn-primary-clr mx-3 my-3 p-3">
+                    La Macif m'accompagne pour acheter une voiture
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="card-support">
+                <div class="card-support-bg">
+                  <img src="./assets/img/vie-active.jpg" alt="" />
+                </div>
+                <div class="card-support-content text-white text-center pt-5">
+                  <h4 class="text-white">Entrée dans la vie active</h4>
+                  <button class="btn btn-primary-clr mx-3 my-3 p-3">
+                    La Macif m'accompagne pour mon entrée dans la vie active
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row px-0 mx-auto mb-5">
+            <button class="btn btn-outline-primary-clr mx-auto w-auto">
+              Découvrir tous les accompagnements
+            </button>
+          </div>
+        </section>
+        <!-- End section support -->
+
+        <!-- Section discount -->
+        <section class="discount bg-blue-clr mt-2 py-5">
+          <div class="row g-0 p-2">
+            <div
+              class="col-12 d-flex flex-column align-items-center text-white"
+            >
+              <img
+                src="./assets/logo/MCF_AVANTAGES_logo_blanc.svg"
+                class="title-logo"
+                alt=""
+                srcset=""
+              />
+              <h3 class="text-white py-4">Massivement avantageux</h3>
+              <p class="text-center">
+                Consommez plus malin au quotidien grâce à vos réduc' Macif
+                Avantages valables auprès de plus de 120 marques (2).
+              </p>
+            </div>
+          </div>
+          <div class="row px-0 group-cards-support d-flex mb-5 mx-1 mx-sm-0">
+            <div class="col-12 col-md-6 col-lg-3">
+              <div
+                class="card-discount d-flex flex-column justify-content-center align-items-center"
+              >
+                <p class="fw-bolder text-white label-promo">PROMO</p>
+                <img
+                  src="./assets/logo/auto-avantages-6.webp"
+                  class="brand-img mt-4"
+                  alt=""
+                  srcset=""
+                />
+                <p class="value-discount pt-2 fw-bolder">jusqu'à -40%</p>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div
+                class="card-discount d-flex flex-column justify-content-center align-items-center"
+              >
+                <p class="fw-bolder text-white label-promo">PROMO</p>
+                <img
+                  src="./assets/logo/belambra-3.webp"
+                  class="brand-img mt-4"
+                  alt=""
+                  srcset=""
+                />
+                <p class="value-discount pt-2 fw-bolder">-6% à -26%</p>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div
+                class="card-discount d-flex flex-column justify-content-center align-items-center"
+              >
+                <p class="fw-bolder text-white label-promo">PROMO</p>
+                <img
+                  src="./assets/logo/pierre-vacances-3.webp"
+                  class="brand-img mt-4"
+                  alt=""
+                  srcset=""
+                />
+                <p class="value-discount pt-2 fw-bolder">-7% à -35%</p>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div
+                class="card-discount d-flex flex-column justify-content-center align-items-center"
+              >
+                <p class="fw-bolder text-white label-promo">PROMO</p>
+                <img
+                  src="./assets/logo/Cdiscount-logo-1.webp"
+                  class="brand-img mt-4"
+                  alt=""
+                  srcset=""
+                />
+                <p class="value-discount pt-2 fw-bolder">-5%</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <button class="btn btn-outline-primary-clr mx-auto w-auto">
+              J'en profite !
+            </button>
+          </div>
+        </section>
+        <!-- End section discount -->
+
+        <!-- Section events -->
+        <section class="events bg-light-clr mt-2 py-5">
+          <div class="row g-0 p-2">
+            <div class="col-12">
+              <h3 class="text-center py-4">Les actualités Macif</h3>
+            </div>
+          </div>
+          <div class="row px-0 group-cards-events d-flex mb-5 mx-2 mx-sm-0">
+            <div class="col-12 col-md-4">
+              <div
+                class="card-event bg-white d-flex flex-column justify-content-center align-items-center p-3 my-3"
+              >
+                <div class="card-event-header">
+                  <h4 class="card-event-title text-center">
+                    La Macif au départ du Grand Défi, un raid handi-valide
+                    inter-entreprise !
+                  </h4>
+                </div>
+                <div class="card-event-body">
+                  <p class="card-event-date">09 mai 2022</p>
+                  <p class="card-event-desc">
+                    Du 13 au 21 mai 2022, 8 collaborateurs de la Macif seront
+                    sur la ligne de départ...
+                  </p>
+                  <a href="#" class="link-next">Lire la suite </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div
+                class="card-event bg-white d-flex flex-column justify-content-center align-items-center p-3 my-3"
+              >
+                <div class="card-event-header">
+                  <h4 class="card-event-title text-center">
+                    Retour sur une journée 100% bien-être à Paris
+                  </h4>
+                </div>
+                <div class="card-event-body">
+                  <p class="card-event-date">05 mai 2022</p>
+                  <p class="card-event-desc">
+                    Pour leur 4ème édition, les Rencontres Santé & Bien-être se
+                    sont déroulées le 20 avril...
+                  </p>
+                  <a href="#" class="link-next">Lire la suite</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div
+                class="card-event bg-white d-flex flex-column justify-content-center align-items-center p-3 mt-3"
+              >
+                <div class="card-event-header">
+                  <h4 class="card-event-title text-center">
+                    Fête européenne du camping car du 20 au 22 mai 2022
+                  </h4>
+                </div>
+                <div class="card-event-body">
+                  <p class="card-event-date">22 avril 2022</p>
+                  <p class="card-event-desc">
+                    Cette année, la fête européenne du camping-car fait halte au
+                    parc des expositions...
+                  </p>
+                  <a href="#" class="link-next">Lire la suite</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <button class="btn btn-outline-primary-clr mx-auto w-auto">
+              Voir toutes les actualités
+            </button>
+          </div>
+        </section>
+        <!-- End section events -->
+
+        <!-- Section advices -->
+        <section class="advices bg-white py-5">
+          <div class="row g-0 p-2">
+            <div class="col-12">
+              <h3 class="text-center py-4">Les conseils Macif</h3>
+            </div>
+          </div>
+          <div class="row px-0 group-cards-advices d-flex mb-5 mx-2 mx-sm-0">
+            <div class="col-12 col-lg-4">
+              <div
+                class="card-advice bg-blue-clr text-white d-flex flex-column justify-content-center align-items-center p-3"
+              >
+                <h4 class="card-advice-title text-white text-center">
+                  Tout savoir sur le tarif et le remboursement...
+                </h4>
+
+                <p class="card-advice-desc text-center">
+                  Le tarif du dermatologue et son remboursement, que ce soit par
+                  l'Assurance Maladie...
+                </p>
+                <a href="#" class="text-white link-next link-clr-white"
+                  >Lire la suite</a
+                >
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div
+                class="card-advice bg-blue-clr text-white d-flex flex-column justify-content-center align-items-center p-3"
+              >
+                <h4 class="card-advice-title text-white text-center">
+                  Comment remplir un constat amiable
+                </h4>
+
+                <p class="card-advice-desc text-center">
+                  Bien remplir un constat à la suite d'un accident, c'est
+                  primordial pour bénéficier...
+                </p>
+                <a href="#" class="text-white link-next link-clr-white"
+                  >Lire la suite</a
+                >
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div
+                class="card-advice bg-blue-clr text-white d-flex flex-column justify-content-center align-items-center p-3"
+              >
+                <h4 class="card-advice-title text-white text-center">
+                  Le calcul du bonus-malus en assurance
+                </h4>
+
+                <p class="card-advice-desc text-center">
+                  Le calcul de votre bonus-malus permet à votre assureur de
+                  déterminer le montant de...
+                </p>
+                <a href="#" class="text-white link-next link-clr-white"
+                  >Lire la suite</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <button class="btn btn-outline-primary-clr mx-auto w-auto">
+              Voir toutes les conseils
+            </button>
+          </div>
+        </section>
+        <!-- End section advices -->
+
+        <!-- Section why -->
+
+        <section class="why bg-light-clr py-5">
+          <div class="row g-0 p-2">
+            <div class="col-12">
+              <h3 class="text-center py-4">Pourquoi choisir la Macif ?</h3>
+              <p class="px-2 px-sm-0">
+                S’assurer à la Macif, c’est choisir un assureur qui peut
+                répondre à l’ensemble de vos besoins, à chaque étape de votre
+                vie. Sur notre site, retrouvez nos offres d’assurance pour votre
+                véhicule, votre habitation, votre famille ou vous-même.
+              </p>
+            </div>
+          </div>
+          <div class="row px-0 group-why d-flex">
+            <div class="col-12 col-md-6">
+              <div
+                class="why-content bg-white d-flex flex-column justify-content-center align-items-center p-3 mx-3 mx-sm-0"
+              >
+                <div class="why-content-header">
+                  <!-- <img
+                    src="./assets/icons/rapide.png"
+                    class="why-content-img"
+                    alt=""
+                    srcset=""
+                  /> -->
+                  <svg
+                    width="75"
+                    height="82"
+                    viewBox="0 0 75 82"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="chrono">
+                      <rect
+                        id="aiguille"
+                        x="32.5"
+                        y="28.5"
+                        width="2"
+                        height="20"
+                        rx="1"
+                        fill="#2f52aa"
+                        stroke="#2f52aa"
+                      >
+                        <animateTransform
+                          attributeName="transform"
+                          attributeType="XML"
+                          type="rotate"
+                          from="0 34 48.5"
+                          to="360 34 48.5"
+                          begin="0s"
+                          dur="9s"
+                          repeatCount="indefinite"
+                        />
+                      </rect>
+                      <path
+                        id="Vector"
+                        d="M27.5 15C27.5 13.6193 28.6193 12.5 30 12.5H36C37.3807 12.5 38.5 13.6193 38.5 15C38.5 16.1412 39.3152 17.0936 40.3988 17.3458C52.7501 20.2213 62.3981 30.1409 64.8779 42.639C65.1146 43.8323 66.144 44.75 67.393 44.75H72.4726C73.8249 44.75 74.4867 46.3986 73.5099 47.3336L62.0372 58.3151C61.4572 58.8703 60.5428 58.8703 59.9628 58.3151L48.4901 47.3336C47.5133 46.3986 48.1751 44.75 49.5274 44.75H53.1806C54.7307 44.75 55.9731 43.3163 55.4954 41.7565C52.6134 32.3449 43.8567 25.5 33.5 25.5C20.7975 25.5 10.5 35.7975 10.5 48.5C10.5 61.2025 20.7975 71.5 33.5 71.5C36.8114 71.5 39.9607 70.7999 42.8067 69.5391C43.5834 69.1951 44.481 69.4524 44.8913 70.135L48.371 75.9235C48.8038 76.6435 48.5587 77.5521 47.8482 77.9177C43.3981 80.2073 38.3507 81.5 33 81.5C15.0507 81.5 0.5 66.9492 0.5 49C0.5 33.5964 11.2167 20.6945 25.6014 17.3458C26.6851 17.0935 27.5 16.1411 27.5 15ZM24 0.5H42C43.3807 0.5 44.5 1.61929 44.5 3V8C44.5 9.38071 43.3807 10.5 42 10.5H24C22.6193 10.5 21.5 9.38071 21.5 8V3C21.5 1.61929 22.6193 0.5 24 0.5ZM57.2521 14.3812L63.9334 20.4111C64.9584 21.3362 65.0394 22.917 64.1143 23.942L62.7743 25.4267C61.8492 26.4517 60.2684 26.5327 59.2434 25.6077L52.5621 19.5777C51.5371 18.6527 51.4561 17.0718 52.3812 16.0468L53.7212 14.5621C54.6462 13.5371 56.2271 13.4561 57.2521 14.3812Z"
+                        fill="#0A2D82"
+                        stroke="#0A2D82"
+                      />
+                      <rect
+                        id="aiguille"
+                        x="32.5"
+                        y="28.5"
+                        width="3"
+                        height="20"
+                        rx="1.5"
+                        fill="#2f52aa"
+                        stroke="#2f52aa"
+                      />
+                      <g id="rotor">
+                        <circle cx="34" cy="48" r="4" fill="#0A2D82" />
+                        <circle cx="34" cy="48" r="4" stroke="#0A2D82" />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <h4 class="why-content-title text-center">Simple et rapide</h4>
+                <p class="why-content-desc">
+                  En quelques minutes, réalisez gratuitement un
+                  <strong> devis d’assurance</strong> et comparez nos offres
+                  pour obtenir notre meilleur prix. Avec notre
+                  <strong>assurance en ligne</strong>, la gestion de votre
+                  contrat peut s’effectuer directement dans votre espace
+                  personnel sécurisé et riche en fonctionnalités. Télécharger
+                  une attestation, modifier un contrat d’assurance ou prendre un
+                  rendez-vous avec un conseiller, c’est possible, même sur
+                  l’appli mobile !
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div
+                class="why-content bg-white d-flex flex-column justify-content-center align-items-center p-3 mx-3 mx-sm-0"
+              >
+                <div class="why-content-header">
+                  <!-- <img
+                    src="./assets/icons/service.png"
+                    class="why-content-img"
+                    alt=""
+                    srcset=""
+                  /> -->
+                  <svg
+                    width="90"
+                    height="73"
+                    viewBox="0 0 90 73"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="pouce">
+                      <path
+                        id="main"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M51 31V10V8.11007C51 8.04928 50.9507 8 50.8899 8V8C50.8376 8 50.7925 7.96289 50.7816 7.91168C49.8212 3.39127 45.8067 0 41 0C36.1933 0 32.1788 3.39127 31.2184 7.91168C31.2075 7.96289 31.1624 8 31.1101 8V8C31.0493 8 31 8.04928 31 8.11007V10V18C31 19.1046 30.1046 20 29 20H15H13.063C13.0282 20 13 20.0282 13 20.063V20.063C13 20.0949 12.9759 20.1218 12.9443 20.1257C6.58982 20.9095 1.50351 25.2753 0.280706 30.8872C0.266428 30.9527 0.208615 31 0.141551 31V31C0.0633745 31 0 31.0634 0 31.1416V33.5V59.5V60.9514C0 60.9783 0.0217487 61 0.0485771 61V61C0.0731153 61 0.0938053 61.0184 0.0968826 61.0428C0.829345 66.8373 5.63791 71.5186 11.8789 72.7074C11.9488 72.7207 12 72.7816 12 72.8527V72.8527C12 72.9341 12.0659 73 12.1473 73H15H31H37H49C50.1046 73 51 72.1046 51 71V61V31Z"
+                        fill="#2f52aa"
+                      >
+                        <!-- <animateTransform
+                          attributeName="transform"
+                          attributeType="XML"
+                          type="translate"
+                          from="1"
+                          to="5"
+                          dur="2s"
+                          repeatCount="indefinite"
+                        /> -->
+                        <animateMotion
+                          path="M 2 0 H 4 Z"
+                          dur="3s"
+                          repeatCount="indefinite"
+                        />
+                      </path>
+                      <path
+                        id="manche"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M82 28C82 26.8954 81.1046 26 80 26H59C57.8954 26 57 26.8954 57 28V71C57 72.1046 57.8954 73 59 73H80C81.1046 73 82 72.1046 82 71V28ZM68 70C71.3137 70 74 67.3137 74 64C74 60.6863 71.3137 58 68 58C64.6863 58 62 60.6863 62 64C62 67.3137 64.6863 70 68 70Z"
+                        fill="#0A2D82"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <h4 class="why-content-title text-center">
+                  Des services élargis
+                </h4>
+                <p class="why-content-desc">
+                  S’assurer à la Macif, c’est bénéficier de nombreuses solutions
+                  qui simplifient vos projets et les principaux événements de
+                  votre vie (déménagement, naissance, études, retraite). Toute
+                  l’année, vous accédez à des réductions sélectionnées et
+                  négociées auprès de nos partenaires pour améliorer votre
+                  pouvoir d’achat. (1)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row px-0 group-why d-flex mb-3">
+            <div class="col-12 col-md-6">
+              <div
+                class="why-content bg-white d-flex flex-column justify-content-center align-items-center p-3 mx-3 mx-sm-0"
+              >
+                <div class="why-content-header">
+                  <!-- <img
+                    src="./assets/icons/ecoute.png"
+                    class="why-content-img"
+                    alt=""
+                    srcset=""
+                  /> -->
+                  <svg
+                    width="71"
+                    height="81"
+                    viewBox="0 0 71 81"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="support">
+                      <circle
+                        id="head"
+                        cx="35.5"
+                        cy="21.5"
+                        r="21.5"
+                        fill="#2f52aa"
+                      />
+                      <path
+                        id="micro"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M26 31.6302V32C26 33.1046 26.8954 34 28 34H35C36.1046 34 37 33.1046 37 32V28C37 26.8954 36.1046 26 35 26H28C26.8954 26 26 26.8954 26 28V29.2038C23.4516 28.2926 20.8004 26.4513 18.576 23.8452C16.4778 21.387 15.1114 18.6606 14.5438 16.1268C14.0638 19.3026 15.3244 23.2822 18.1777 26.6251C20.4612 29.3005 23.3078 31.0325 26 31.6302Z"
+                        fill="white"
+                      >
+                        <animateMotion
+                          path="M -6 0 H -1 Z"
+                          dur="3s"
+                          repeatCount="indefinite"
+                        />
+                      </path>
+                      <path
+                        id="body"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M70.9396 81C70.9797 80.3382 71 79.6714 71 79C71 60.2223 55.1061 45 35.5 45C15.8939 45 0 60.2223 0 79C0 79.6714 0.0203247 80.3382 0.0603943 81H70.9396Z"
+                        fill="#0A2D82"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <h4 class="why-content-title text-center">Qualité d'écoute</h4>
+                <p class="why-content-desc">
+                  S’assurer à la Macif, c’est choisir une qualité d’accueil,
+                  d’écoute et de proximité. Nos conseillers en agence ou au
+                  téléphone vous apportent les réponses à vos questions ainsi
+                  que des conseils utiles. Près de 9 000 professionnels, tous
+                  basés exclusivement en France, vous accompagnent en cas de
+                  sinistre ou besoin d’assistance !
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div
+                class="why-content bg-white d-flex flex-column justify-content-center align-items-center p-3 mx-3 mx-sm-0"
+              >
+                <div class="why-content-header">
+                  <!-- <img
+                    src="./assets/icons/valeurs.png"
+                    class="why-content-img"
+                    alt=""
+                    srcset=""
+                  /> -->
+
+                  <svg width="88" height="83" viewBox="0 0 88 83" fill="none">
+                    <g id="Group 1">
+                      <path
+                        id="body"
+                        d="M0 67.4536C1.4364 42.7938 13.4065 32.0722 22.0249 31C12.9277 49 33.0374 62 43.5711 70.5C43.5711 70.5 45.9651 72.5 46.9227 74C47.8803 75.5 47.8803 78 47.8803 78C47.8803 78 48.3591 83 47.4015 83H13.4065C12.4489 71.2062 16.7581 57.268 18.6733 51.9072C19.0564 47.1897 17.5561 47.0825 16.7581 47.6186C13.4654 54.03 4.77248 66.9175 1.4364 67.9897C1.11718 68.0923 0.478802 67.9897 0 67.4536Z"
+                        fill="#0A2D82"
+                      />
+                      <circle id="head" cx="29" cy="13" r="13" fill="#0A2D82" />
+
+                      <path
+                        id="heart"
+                        d="M66.1767 47.3367C63.1807 53.5587 47.0234 67.0398 46.5419 67.5199L46.0604 68C33.5412 58.8782 27.541 51.5245 24.7747 46.7962C21.4042 41.0351 22.407 28.9233 31.5158 28.0726C42.002 27.0932 44.5089 36.2945 45.4719 39.6552C46.0604 37.2547 49.8055 27.7073 59.4356 28.613C69.4403 29.554 69.1727 41.1147 66.1767 47.3367Z"
+                        fill="#2f52aa"
+                      >
+                        <animateTransform
+                          attributeName="transform"
+                          attributeType="XML"
+                          type="scale"
+                          from="1"
+                          to="1.04"
+                          value="1;1.1;0.9;1.1;1"
+                          begin="0s"
+                          dur="1.6s"
+                          repeatCount="indefinite"
+                        />
+                      </path>
+                    </g>
+                  </svg>
+                </div>
+                <h4 class="why-content-title text-center">
+                  Des valeurs mutualistes
+                </h4>
+                <p class="why-content-desc">
+                  S’assurer à la Macif, c’est choisir un assureur fidèle à ses
+                  valeurs mutualistes : solidarité, équité et responsabilité. En
+                  votant pour vos représentants, vous avez la possibilité d’agir
+                  directement sur l’avenir de votre mutuelle d’assurance. Ils
+                  peuvent proposer des services innovants et de nouvelles
+                  garanties, toujours dans votre intérêt !
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row px-0 mb-2">
+            <p class="descriptive-text px-4 px-sm-0">
+              (1) Offres soumises à conditions et non rétroactives, réservées
+              aux sociétaires Macif et accessibles aux adhérents d'Apivia Macif
+              Mutuelle, NUOMA, MNPAF et MNFCT, ainsi qu'à leur conjoint ou
+              concubin notoire ou partenaire (liés par un PACS) et à leurs
+              enfants fiscalement à charge et vivant sous le même toit, hors
+              personnes morales. Plus d'informations sur le site
+              macifavantages.fr et auprès du prestataire concerné sur les dates
+              de validité et conditions de vente respectives.
+            </p>
+            <p class="descriptive-text px-4 px-sm-0">
+              (2) Offres soumises à conditions et non rétroactives, réservées
+              aux sociétaires de la Macif et accessibles aux adhérents d'Apivia
+              Macif Mutuelle, NUOMA, MNPAF et MNFCT, ainsi qu'à leur conjoint ou
+              concubin notoire ou partenaire (liés par un PACS) et à leurs
+              enfants fiscalement à charge et vivant sous le même toit, hors
+              personnes morales. Renseignez-vous avant toute commande sur le
+              site macifavantages.fr, sur le site market.macifavantages.fr et
+              auprès du prestataire concerné sur les dates de validité et
+              conditions de vente respectives.
+            </p>
+          </div>
+        </section>
+        <!-- End section why -->
+      </main>
+    </div>
+    <!-- Main -->
+    <footer class="bg-blue-clr text-white pt-4 pb-2">
+      <div class="container">
+        <div class="row pb-4">
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2 text-center">
+            <a href="#" class="text-center text-white px-3">Nous contacter</a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2 text-center">
+            <a href="#" class="text-white px-3">Application Macif mobile</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2 text-center">
+            <a href="#" class="text-white px-3">En cas d'urgence</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2 text-center">
+            <a href="#" class="text-white px-3">Mention légales</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2 text-center">
+            <a href="#" class="text-white px-3">Données personnelles</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-2 text-center">
+            <a href="#" class="text-white px-3">Cookies</a>
+          </div>
+        </div>
+        <div class="row pb-4">
+          <div class="col text-center">
+            <p class="social-link-label">Suivez nous</p>
+            <a href="#" class="text-white px-3"
+              ><i class="bi bi-facebook social-link-item"></i
+            ></a>
+            <a href="#" class="text-white px-3"
+              ><i class="bi bi-twitter social-link-item"></i
+            ></a>
+            <a href="#" class="text-white px-3"
+              ><i class="bi bi-instagram social-link-item"></i
+            ></a>
+            <a href="#" class="text-white px-3"
+              ><i class="bi bi-youtube social-link-item"></i
+            ></a>
+          </div>
+        </div>
+        <div class="row pb-0">
+          <div class="col text-center">
+            <p>
+              Assurance MACIF : votre assureur en ligne pour vos besoins en
+              assurance auto, moto, habitation, mutuelle santé ainsi qu'en
+              crédit, épargne, banque.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

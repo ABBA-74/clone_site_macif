@@ -1,0 +1,16 @@
+@use '../general/variables' as var;
+
+.card-event {
+  height: clamp(20rem, 22rem, 35rem);
+  border: 1px solid #55555569;
+  // margin-block: 1rem;
+  border-radius: var.$border-radius;
+  transition: box-shadow 0.45s ease-in-out;
+  &:hover {
+    box-shadow: var.$shadow-md;
+  }
+
+  .card-event-header {
+    height: clamp(2rem, 8rem, 50%);
+  }
+}

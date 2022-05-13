@@ -1,0 +1,20 @@
+@use '../general/variables' as var;
+
+.card-discount .label-promo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5rem 1.6rem;
+  background-color: #2ad2c9;
+  border-bottom-left-radius: 0.3rem;
+  font-size: 0.7rem;
+  padding-bottom: 0.5rem;
+  transform: rotateZ(45deg) translate(16%, -59%);
+  transition: all 0.5s ease-out;
+}
+
+.card-discount:hover .label-promo {
+  transform: rotateZ(0deg) translate(10%, -35%);
+  box-shadow: var.$shadow-xs;
+  //   padding-inline: 3rem;
+}

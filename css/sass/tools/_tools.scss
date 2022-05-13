@@ -1,0 +1,38 @@
+@use '../general/variables' as var;
+
+.descriptive-text {
+  font-size: 0.8rem;
+}
+
+.btn-w-md {
+  width: 8rem;
+}
+
+.bg-blue-clr {
+  background-color: var.$primary-clr-100;
+}
+.bg-light-clr {
+  background-color: #f2f3f3;
+}
+
+.btn-primary-clr {
+  color: #fff;
+  background-color: var.$primary-clr-50;
+}
+.btn-primary-clr:hover {
+  color: #fff;
+  background-color: var.$primary-clr-75;
+}
+.btn-outline-primary-clr {
+  background-color: #fff;
+  border-color: var.$primary-clr-50;
+  color: var.$primary-clr-50;
+}
+.btn-outline-primary-clr:hover {
+  background-color: var.$primary-clr-50;
+  color: #fff;
+}
+
+.text-primary-clr {
+  color: var.$primary-clr-50;
+}

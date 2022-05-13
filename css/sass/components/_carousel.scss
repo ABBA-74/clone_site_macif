@@ -1,0 +1,97 @@
+.carousel-item:nth-child(2) img {
+  background-color: #fff;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+.carousel-caption p {
+  color: #062367;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  background-color: #fff;
+  margin-bottom: 0;
+}
+.carousel-caption .carousel-subtitle {
+  position: relative;
+  color: #062367;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-block: 1rem;
+  /* background-color: red; */
+  background-position-x: 10rem;
+  background-position-y: 5rem;
+  /* background-size: 5rem; */
+  background-repeat: no-repeat;
+}
+// .carousel-caption .carousel-subtitle:after {
+//   content: '';
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   /* right: 0; */
+//   height: 15px;
+//   width: auto;
+//   background-color: green;
+// }
+.carousel-caption .carousel-subtext {
+  font-size: 1rem;
+}
+.carousel-caption ~ .carousel-subtext:nth-child(1) {
+  padding-top: 3rem;
+}
+.carousel-caption button {
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel-indicators button {
+    visibility: hidden;
+  }
+  .carousel-inner {
+    height: clamp(28rem, 65rem, 710px);
+  }
+  .carousel-item {
+    position: relative;
+    height: 100%;
+    // overflow: visible !important;
+  }
+  .carousel-item img {
+    object-fit: cover;
+    object-position: 0% center;
+    height: 50%;
+  }
+  .carousel-caption {
+    left: 0;
+    top: 50%;
+    height: 50%;
+    right: 0;
+    background-color: #fff;
+    padding-top: 0 !important;
+  }
+  .carousel-caption p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    background-color: #fff;
+    margin-bottom: 0;
+  }
+  .carousel-caption {
+    padding-top: 35px;
+    padding-top: 5vh !important;
+    // background-color: red !important;
+  }
+  .carousel-caption .carousel-subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-block: 1rem;
+  }
+}

@@ -1,0 +1,36 @@
+@use './sass/general/variables';
+@use './sass/general/typo';
+@use './sass/general/reset';
+@use './sass/general/body';
+
+@use './sass/layout/sections';
+@use './sass/layout/section-quotes';
+@use './sass/layout/section-carousel';
+@use './sass/layout/section-news';
+@use './sass/layout/section-discount';
+@use './sass/layout/section-why';
+@use './sass/layout/footer';
+
+@use './sass/components/btn-agence-rappel';
+@use './sass/components/btn-sinistre';
+@use './sass/components/btn-top-page';
+@use './sass/components/navbar';
+@use './sass/components/header';
+@use './sass/components/card_quote';
+@use './sass/components/carousel';
+@use './sass/components/link-next-chevron';
+@use './sass/components/card-sm';
+@use './sass/components/card-lg';
+@use './sass/components/card-support';
+@use './sass/components/card-discount';
+@use './sass/components/label-promo';
+@use './sass/components/card-event';
+@use './sass/components/card-advice';
+
+@use './sass/tools/tools';
+// @use './sass/components/errorMsg';
+// @use './sass/components/btnsOpt';
+// @use './sass/components/modal';
+// @use './sass/components/btnsCard';
+// @use './sass/tools/classes';
+// @use './sass/layouts/mediaQueries';

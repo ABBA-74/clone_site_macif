@@ -1,0 +1,38 @@
+@use '../general/variables' as var;
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var.$primary-clr-100;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*** tools ***/
+a {
+  text-decoration: none;
+  color: rgb(21, 21, 21);
+}
+
+a:hover,
+a:focus {
+  color: rgb(21, 21, 21);
+}
+
+.list-group-item {
+  border: none;
+}
+.list-group-item h4 {
+  color: var.$primary-clr-100;
+}
