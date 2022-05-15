@@ -4,16 +4,21 @@
   position: relative;
   border-radius: var.$border-radius;
   border: 1px solid rgba(85, 85, 85, 0.4117647059);
-  height: clamp(10rem, 25rem, 48rem);
+  height: clamp(12rem, 23rem, 48rem);
+  // height: auto;
+  // height: auto;
   padding-inline: 2rem;
   margin-block: 1rem;
 
   .why-content-header {
-    position: absolute;
+    position: relative;
     top: 1.2rem;
     width: 5rem;
     // border: 1px solid rgba(85, 85, 85, 0.4117647059);
-    height: clamp(5em, 8rem, 10rem);
+    height: clamp(5rem, 8rem, 10rem);
+    @media screen and (min-width: 1000px) {
+      top: 2rem;
+    }
 
     .why-content-img {
       //   position: absolute;
@@ -24,7 +29,11 @@
       margin-bottom: 1rem;
     }
   }
-  .why-content-title {
-    padding-top: 100px;
+  .why-content-body {
+    height: clamp(15rem, 18rem, 29rem);
+    // min-height: calc(100% + 5rem);
+    .why-content-title {
+      padding-top: 2rem;
+    }
   }
 }
