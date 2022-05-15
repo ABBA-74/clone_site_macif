@@ -49,9 +49,18 @@ header {
         left: 0;
         right: 0;
         height: 4px;
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
         transform: scaleX(0);
         animation: scaleNavActive 0.7s forwards ease-in-out;
         background-color: var.$secondary-clr-50;
+      }
+      @media screen and (max-width: 1200px) {
+        &.active:before,
+        &:hover:before {
+          bottom: 0.8rem;
+          height: 2px;
+        }
       }
     }
   }

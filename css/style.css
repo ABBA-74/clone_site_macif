@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Source Sans Pro", sans-serif;
 }
 
 h1,
@@ -17,7 +16,6 @@ h4,
 h5,
 h6 {
   color: #0a2d82;
-  font-family: "Montserrat", sans-serif;
 }
 
 /*** tools ***/
@@ -40,11 +38,30 @@ a:focus {
 }
 
 body {
+  font-family: "Source Sans Pro", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.carousel p,
+.carousel ::after,
+.carousel ::before {
+  font-family: "Montserrat", "Source Sans Pro", sans-serif;
+}
+
+body {
   position: relative;
   min-height: 100vh;
   font-size: 16px;
-  overflow-x: hidden;
   color: #333;
+  overflow-x: hidden;
 }
 
 h4 {
@@ -302,10 +319,18 @@ header {
   left: 0;
   right: 0;
   height: 4px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
   transform: scaleX(0);
   -webkit-animation: scaleNavActive 0.7s forwards ease-in-out;
           animation: scaleNavActive 0.7s forwards ease-in-out;
   background-color: #cbe300;
+}
+@media screen and (max-width: 1200px) {
+  .header-bottom .navbar-nav .nav-link.active:before, .header-bottom .navbar-nav .nav-link:hover:before {
+    bottom: 0.8rem;
+    height: 2px;
+  }
 }
 
 @-webkit-keyframes scaleNavActive {
@@ -582,7 +607,7 @@ header {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
-.carousel-caption .carousel-subtitle:after {
+.carousel-caption .carousel-subtitle::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -601,23 +626,23 @@ header {
   margin-top: 3rem;
 }
 
-.carousel-item:nth-child(1) .carousel-subtitle:after {
-  right: calc(100% - 17rem);
+.carousel-item:nth-child(1) .carousel-subtitle::after {
+  right: calc(100% - 21rem);
   height: 15px;
 }
 
-.carousel-item:nth-child(2) .carousel-subtitle:after {
+.carousel-item:nth-child(2) .carousel-subtitle::after {
+  right: calc(100% - 16rem);
+  height: 15px;
+}
+
+.carousel-item:nth-child(3) .carousel-subtitle::after {
   right: calc(100% - 13rem);
   height: 15px;
 }
 
-.carousel-item:nth-child(3) .carousel-subtitle:after {
-  right: calc(100% - 11rem);
-  height: 15px;
-}
-
-.carousel-item:nth-child(4) .carousel-subtitle:after {
-  right: calc(100% - 16rem);
+.carousel-item:nth-child(4) .carousel-subtitle::after {
+  right: calc(100% - 20rem);
   height: 15px;
 }
 
@@ -641,20 +666,20 @@ header {
        object-position: 0% center;
     height: 50%;
   }
-  .carousel-item:nth-child(1) .carousel-subtitle:after {
-    right: calc(100% - 11rem);
+  .carousel-item:nth-child(1) .carousel-subtitle::after {
+    right: calc(100% - 14rem);
     height: 15px;
   }
-  .carousel-item:nth-child(2) .carousel-subtitle:after {
-    right: calc(100% - 8rem);
+  .carousel-item:nth-child(2) .carousel-subtitle::after {
+    right: calc(100% - 11rem);
     height: 15px;
   }
   .carousel-item:nth-child(3) .carousel-subtitle:after {
-    right: calc(100% - 7rem);
+    right: calc(100% - 9rem);
     height: 15px;
   }
-  .carousel-item:nth-child(4) .carousel-subtitle:after {
-    right: calc(100% - 11rem);
+  .carousel-item:nth-child(4) .carousel-subtitle::after {
+    right: calc(100% - 13rem);
     height: 15px;
   }
 
@@ -898,6 +923,10 @@ header {
 
 .bg-light-clr {
   background-color: #f2f3f3;
+}
+
+.bg-light-gray {
+  background-color: #e9e9e9;
 }
 
 .btn-primary-clr {
