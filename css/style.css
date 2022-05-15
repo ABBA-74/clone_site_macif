@@ -88,7 +88,7 @@ section.quotes {
 }
 
 /* section carousel */
-section.carousel {
+section.carousel-section {
   padding-block: 2.5rem;
   background-color: #092875;
   /* height: 150px; */
@@ -191,7 +191,7 @@ footer .social-link-item:hover {
   right: 0;
   top: calc(37% + 150px);
   color: white;
-  background-color: #e6325a;
+  background-color: #a71d3b;
   height: 77px;
   width: 68px;
   border-top-left-radius: 0.3rem;
@@ -531,8 +531,7 @@ header {
   position: relative;
   background-color: #fff;
   height: 175px;
-  width: 175px;
-  width: auto;
+  max-width: 175px;
   border-radius: 0.3rem;
   overflow: hidden;
 }
@@ -549,6 +548,12 @@ header {
   transform-origin: center;
 }
 
+.carousel-dark {
+  border-radius: 0.3rem;
+  overflow: hidden;
+  border: 3px solid #fff;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
   z-index: 5;
@@ -557,6 +562,7 @@ header {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   position: relative;
+  opacity: 0.4;
 }
 
 .carousel-control-prev-icon:before,
@@ -747,9 +753,6 @@ header {
   border-radius: 0.3rem;
   overflow: hidden;
 }
-.card-sm:nth-child(1) {
-  margin-right: 1.5rem;
-}
 .card-sm .card-img img {
   width: 200px;
   height: 330px;
@@ -789,7 +792,6 @@ header {
 
 .card-support {
   position: relative;
-  background-color: red;
   max-height: 370px;
   max-width: 370px;
   overflow: hidden;
@@ -797,7 +799,7 @@ header {
   transition: box-shadow 0.45s ease-in-out;
 }
 .card-support:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.49);
+  box-shadow: 0 0 20px rgba(85, 85, 85, 0.4);
 }
 .card-support .card-support-bg img {
   width: 100%;
@@ -895,7 +897,14 @@ header {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.49);
 }
 .card-event .card-event-header {
-  height: clamp(2rem, 8rem, 50%);
+  min-height: 2.5rem;
+  padding-inline: 5rem;
+}
+@media screen and (min-width: 992px) {
+  .card-event .card-event-header {
+    padding-inline: 0.5rem;
+    min-height: 8rem;
+  }
 }
 
 .card-advice {
@@ -904,9 +913,6 @@ header {
   margin-block: 1rem;
   border-radius: 0.3rem;
   transition: box-shadow 0.45s ease-in-out;
-}
-.card-advice:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.49);
 }
 
 .descriptive-text {
@@ -937,6 +943,16 @@ header {
 .btn-primary-clr:hover {
   color: #fff;
   background-color: #075b94;
+}
+
+.btn-accent-clr {
+  color: #fff;
+  background-color: #e6325a;
+}
+
+.btn-accent-clr:hover {
+  color: #fff;
+  background-color: #a71d3b;
 }
 
 .btn-outline-primary-clr {

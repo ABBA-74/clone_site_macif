@@ -1,5 +1,11 @@
 @use '../general/variables' as var;
 
+.carousel-dark {
+  border-radius: 0.3rem;
+  overflow: hidden;
+  border: 3px solid #fff;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
   z-index: 5;
@@ -7,6 +13,7 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   position: relative;
+  opacity: 0.4;
 }
 .carousel-control-prev-icon:before,
 .carousel-control-next-icon:before {
@@ -144,7 +151,6 @@
   .carousel-caption {
     padding-top: 35px;
     padding-top: 5vh !important;
-    // background-color: red !important;
   }
   .carousel-caption .carousel-subtitle {
     font-size: 24px;

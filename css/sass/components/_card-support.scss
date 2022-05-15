@@ -2,14 +2,13 @@
 
 .card-support {
   position: relative;
-  background-color: red;
   max-height: 370px;
   max-width: 370px;
   overflow: hidden;
   border-radius: var.$border-radius;
   transition: box-shadow 0.45s ease-in-out;
   &:hover {
-    box-shadow: var.$shadow-md;
+    box-shadow: var.$shadow-sm;
   }
   .card-support-bg img {
     width: 100%;
@@ -30,8 +29,6 @@
       left: 0;
       right: 0;
       opacity: 0;
-      //   background-color: red;
-      //   color: red !important;
       @keyframes fadeInBtn {
         to {
           opacity: 1;
